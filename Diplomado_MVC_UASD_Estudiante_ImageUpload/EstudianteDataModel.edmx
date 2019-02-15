@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EstudianteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EstudianteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'EstudianteDB.dbo.tblEstudiante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="tblEstudiante">
@@ -12,12 +12,12 @@ advertencia 6002: La tabla o vista 'EstudianteDB.dbo.tblEstudiante' no tiene def
             <PropertyRef Name="EstudianteID" />
           </Key>
           <Property Name="EstudianteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombres" Type="varchar" MaxLength="50" />
-          <Property Name="Apellidos" Type="varchar" MaxLength="50" />
-          <Property Name="Direccion" Type="varchar" MaxLength="50" />
-          <Property Name="Telefono" Type="varchar" MaxLength="15" />
-          <Property Name="Cedula" Type="varchar" MaxLength="13" />
-          <Property Name="ImageUrl" Type="varchar" MaxLength="50" />
+          <Property Name="Nombres" Type="nvarchar" MaxLength="50" />
+          <Property Name="Apellidos" Type="nvarchar" MaxLength="50" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cedula" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="EstudianteDBModelStoreContainer">
           <EntitySet Name="tblEstudiante" EntityType="Self.tblEstudiante" store:Type="Tables" store:Schema="dbo">
@@ -32,8 +32,7 @@ advertencia 6002: La tabla o vista 'EstudianteDB.dbo.tblEstudiante' no tiene def
     FROM [dbo].[tblEstudiante] AS [tblEstudiante]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EstudianteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -42,12 +41,12 @@ advertencia 6002: La tabla o vista 'EstudianteDB.dbo.tblEstudiante' no tiene def
             <PropertyRef Name="EstudianteID" />
           </Key>
           <Property Name="EstudianteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="Cedula" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
-          <Property Name="ImageUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="EstudianteDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblEstudiante" EntityType="Self.tblEstudiante" />

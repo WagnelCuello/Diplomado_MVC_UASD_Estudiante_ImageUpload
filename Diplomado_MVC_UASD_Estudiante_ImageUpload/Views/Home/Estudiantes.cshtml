@@ -36,6 +36,7 @@
 </head>
 @using (Html.BeginForm("FileUpload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
     <table>
         <tbody>
             <tr>

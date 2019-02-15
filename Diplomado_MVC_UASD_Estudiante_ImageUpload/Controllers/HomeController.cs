@@ -18,9 +18,12 @@ namespace Diplomado_MVC_UASD_Estudiante_ImageUpload.Controllers
             if (file != null)
             {
                 EstudianteDBEntities db = new EstudianteDBEntities();
+
                 string ImageName = System.IO.Path.GetFileName(file.FileName);
                 string phisicalPath = Server.MapPath("~/Images/" + ImageName);
+
                 file.SaveAs(phisicalPath);
+
                 tblEstudiante estudiante = new tblEstudiante();
                 estudiante.Nombres = Request.Form["Nombres"];
                 estudiante.Apellidos = Request.Form["Apellidos"];
@@ -28,6 +31,7 @@ namespace Diplomado_MVC_UASD_Estudiante_ImageUpload.Controllers
                 estudiante.Telefono = Request.Form["Telefono"];
                 estudiante.Cedula = Request.Form["Cedula"];
                 estudiante.ImageUrl = ImageName;
+
                 db.tblEstudiante.Add(estudiante);
                 db.SaveChanges();
             }
