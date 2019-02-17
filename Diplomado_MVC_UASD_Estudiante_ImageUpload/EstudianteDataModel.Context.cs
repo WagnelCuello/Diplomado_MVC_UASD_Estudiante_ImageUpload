@@ -25,6 +25,6 @@ namespace Diplomado_MVC_UASD_Estudiante_ImageUpload
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tblEstudiante> tblEstudiante { get; set; }
+        public virtual DbSet<tblEstudiantes> tblEstudiantes { get; set; }
     }
 }

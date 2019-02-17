@@ -12,14 +12,14 @@ namespace Diplomado_MVC_UASD_Estudiante_ImageUpload
     using System;
     using System.Collections.Generic;
     
-    public partial class tblEstudiante
+    public partial class tblEstudiantes
     {
-        public int EstudianteID { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Cedula { get; set; }
         public string ImageUrl { get; set; }
+        public int EstudianteId { get; set; }
     }
 }

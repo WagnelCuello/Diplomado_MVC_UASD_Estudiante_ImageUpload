@@ -154,7 +154,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tblEstudiante.cs">
+    <Compile Include="tblEstudiantes.cs">
       <DependentUpon>EstudianteDataModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

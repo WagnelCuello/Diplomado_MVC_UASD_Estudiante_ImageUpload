@@ -24,15 +24,15 @@ namespace Diplomado_MVC_UASD_Estudiante_ImageUpload.Controllers
 
                 file.SaveAs(phisicalPath);
 
-                tblEstudiante estudiante = new tblEstudiante();
+                tblEstudiantes estudiante = new tblEstudiantes();
                 estudiante.Nombres = Request.Form["Nombres"];
                 estudiante.Apellidos = Request.Form["Apellidos"];
                 estudiante.Direccion = Request.Form["Direccion"];
                 estudiante.Telefono = Request.Form["Telefono"];
                 estudiante.Cedula = Request.Form["Cedula"];
                 estudiante.ImageUrl = ImageName;
-
-                db.tblEstudiante.Add(estudiante);
+                
+                db.tblEstudiantes.Add(estudiante);
                 db.SaveChanges();
             }
             return RedirectToAction("../Home/Detalle/");
